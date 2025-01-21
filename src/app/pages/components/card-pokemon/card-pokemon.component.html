@@ -1,0 +1,18 @@
+<div class="container my-2">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <!-- Card -->
+    <div *ngFor="let pokemon of pokemons; let i = index" class="col">
+      <div class="card h-100">
+        <img [src]=" pokemon.image " class="card-img-top" alt="{{ pokemon.name }}">
+        <div class="card-body">
+          <h5 class="card-title">#{{ i + 1 }} {{ pokemon.name | uppercase }}</h5>
+          <p class="card-text"><strong *ngFor="let type of pokemon.types">{{ type }}</strong></p>
+          <!--<div *ngFor="let type of pokemon.types">
+            <p>{{ type }}</p>
+          </div>-->
+          <a href="#" class="btn btn-outline-primary">mais detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
