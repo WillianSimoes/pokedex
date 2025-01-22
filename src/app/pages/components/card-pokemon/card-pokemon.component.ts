@@ -10,7 +10,7 @@ import { PokemonApiService } from '../../../services/pokemon-api.service';
 })
 export class CardPokemonComponent implements OnInit {
   pokemons: any[] = [];
-  pokemonDetails: any[] = [];
+  //pokemonDetails: any[] = [];
 
   constructor(private pokemonApiService: PokemonApiService) { }
 

@@ -10,7 +10,7 @@
           <!--<div *ngFor="let type of pokemon.types">
             <p>{{ type }}</p>
           </div>-->
-          <a href="#" class="btn btn-outline-primary">mais detalhes</a>
+          <a [routerLink]="['/pokemon', pokemon.name]" class="btn btn-outline-primary">mais detalhes</a>
         </div>
       </div>
     </div>

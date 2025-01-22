@@ -7,12 +7,12 @@ import { forkJoin, map, Observable } from 'rxjs';
 })
 export class PokemonApiService {
 
-private apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=2000';
+private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 
   constructor(private http: HttpClient) { }
 
   getPokemons(): Observable<any>{
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any>(this.apiUrl+"?limit=2000");
   }
 
   getPokemonDetails(pokemonUrl: string): Observable<any> {
